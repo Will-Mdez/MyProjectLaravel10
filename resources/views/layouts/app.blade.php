@@ -7,6 +7,13 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
+        <!-- MAPS API -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        
+        <script type="text/javascript"
+src="https://maps.google.com/maps/api/js?key={{ env('GOOGLE_MAP_KEY') }}&callback=initMap" ></script>
+
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />

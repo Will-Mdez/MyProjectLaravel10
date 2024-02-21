@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ChirpController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\LocationPruebaController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Chirp;
 
@@ -53,6 +54,10 @@ Route::middleware('auth')->group(function () {
         ->name('chirps.update');
     Route::delete('/chirps/{chirp}', [ChirpController::class, 'destroy'])
         ->name('chirps.destroy');
+    
+   
+    Route::get('/locations', [LocationPruebaController::class, 'showLocations'])
+    ->name('locations.index');
     
 });
 
